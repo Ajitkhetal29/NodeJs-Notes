@@ -1,0 +1,76 @@
+Mode Js Notes
+
+node js - A runtime environment for executing js code.
+	- helps to execute the js outside the browser
+	- v8 engine converts the js code to native machine code.
+
+Features-
+- Event driven , non-blocking input output model for efficiency
+- can be used at both front end and backend 
+- ideal for web applications , real time applications
+- file system access 
+- server side capabilities - can handle http request, file operation and other server side functionalities.
+
+Not Available -
+- Window object
+- Dom Manipulation
+- Bom 
+
+DNS - Domain name System.
+- when we type any website into browser , DNS helps to find the IP address of the website so can our computer connect to it.
+
+HTTP -
+HyperText transfer protocall - 
+protocall used for transfering data on the web.
+Example:
+When you type http://example.com, your browser sends an HTTP request to g et the website content.
+
+HTTPS - 
+HyperText transfer protocall secure
+does the same job of transfering the data on the web but securily.
+here the data is encrypted, so no one can chnage or see while travelling over the internet.
+useful for banking, logging, and secure websites.
+
+TCP - Transmission control protocal
+low level protocall works underneath HTTP and HTTPs .
+it handles how data is sent over the web
+breakes the data into small packets 
+send them acroos internet
+make sure they sent correctly
+
+
+
+Headers - header is a filed of a HTTp rquest or respond that holds extra informtiomn or metadata about rrq or response.
+built in common 
+request headrs - 
+1. host name,
+2. rerquest type,
+3. userinfo
+
+response headers -
+1.content type ,
+2.content length,
+3.cookies 
+
+can set our custom headers  
+1. using fetch 
+fetch('https://api.example.com/data', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer token123'
+  }
+});
+
+2. using axios 
+const axios = require('axios');
+axios.get('https://api.example.com/data', {
+  headers: {
+    'Authorization': 'Bearer token123',
+    'Accept': 'application/json'
+  }
+});
+
+
+
+
