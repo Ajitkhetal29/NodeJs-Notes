@@ -71,6 +71,18 @@ axios.get('https://api.example.com/data', {
   }
 });
 
+Stream - Contineous flow of the data. allows us to handle the data chynks by chunks instaed all at once.
+they are very useful for dealing with large size files, videos and data.
+
+advantage - effiecient memry uses , fatser performamnce 
+
+types of streams - 
+1. readable - data can be read from it
+2. writable - data can be write to it.
+3.Duplex - we can read and wrie data
+4. Transform - modifies data.
+
+
 
 
 
