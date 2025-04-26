@@ -89,3 +89,10 @@ Express Js :
 	- Provides features for building single-page, multi-page web application.
 	- 
 
+
+
+MVc - Model View controller
+	- it ia a software architectural pattern for developing user interfaces.
+Model - managaes data and business logic.
+View - handles the display and presentation of the data to user.
+Controller - process the user input. interacts with the model and updates the view.
