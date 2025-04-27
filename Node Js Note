@@ -5,16 +5,138 @@ node js - A runtime environment for executing js code.
 	- v8 engine converts the js code to native machine code.
 
 Features-
-- Event driven , non-blocking input output model for efficiency
-- can be used at both front end and backend 
-- ideal for web applications , real time applications
-- file system access 
-- server side capabilities - can handle http request, file operation and other server side functionalities.
+- asynchronus and event driven - it handles multiple requests without blocking the program. 
+- Fast execution - uses v8 engine for fast execution
+- no buffering - sents data in chunks instaed of loading the entire file at a single time.
+- cross platform - works on linux , windows , mac OS.
+
 
 Not Available -
 - Window object
 - Dom Manipulation
 - Bom 
+
+Runtime Environment - provides everything that need to run a program.
+		   - manages the code execution  , memry interaction and hardware.
+
+Framework - Gives structure and tools to buold applicatios faster.
+
+Express Js - it si a web framework for node js .
+	  - helps to handle the api , create server and handle rerq and response.
+
+client side - 1. runs on the web broswer 
+		2. languages user are - HTML CSS and JS
+		3. Handles the user interface , interaction of user  and client side logic.
+ server side -1. runs on the server 
+		2. languages user is js
+		3. handles business logic, data storage ,authentication , autherisation etc.
+
+single threaded programming - 
+	- program has obnly one thread to handle all the task.
+	- only one task can be handle at a time.
+	- blocking type of code.
+
+synchronus programming - 
+	- synchronus programming means task are done one after the another.
+	- the next task will wait for the exeution of current task.	
+
+Multi-threaded programming -
+	- Multi-threaded programming means the program can run multiple tasks at the same time using multiple threads.
+
+Asynchronous programming - 
+	- asynchronus programming means task can initialize and move on without waiting for the previous task to finish.
+
+The main difference is in how tasks are handled:
+Synchronous programming: Tasks are executed one by one, and each task waits for the previous one to finish before moving on.
+Asynchronous programming: Tasks can start and run independently, without waiting for others to finish. The program keeps working on other tasks while waiting for the first one to complete.
+
+Event - events are the actions that happens during the execution of the program.
+	- eg when user clicks on button a file will be uploaded any request coming to the server. this action are events.
+	 - 	
+event emmiter - create or emits the event.
+event que - container for emitted events.
+event handler - function that respond to the events
+event loop - monitors the event que , executes these events in order they were added.
+
+npm - stands for node package manager 	
+	- helps to manage libraries or packages of the application.
+	- allows us to easily install or uninstall , update the dependencies.
+
+node_modules - it is foilkder where all the libraries and packages installed via npm are stored.
+	- contains all the dependencies of the project need to run.
+
+package.json - contains meta data about the project.
+		- manages dependencies , scripts , version, auther and license. 
+
+
+module - 	
+	- module contains a spoecific functionality that can be reused easily within applicatrion
+	- module helps to keep our code organised and reusable.
+	- there are few buit in module eg fs- for file opeartion, http - for creariung servers , path - for handling path.
+
+function - a block of code performs a specific task. it can be called and executed whenever needed.
+
+ways to export module - 
+1. module.export.sayHello = sayHello
+2. export.sayHello(){}
+
+mostly used common node modules.
+1. http - used for creating http server , handle http request and response
+
+const http = requre('http')
+const server = http.createServer((req,res)=>{
+res.write("Hello")
+res.end();
+});
+server.listen(3000)
+
+2. fs - provides functionality to interact with the file system
+const fs = require('fs')
+fs.readFile("example.txt",'utf8', (err, data) => {
+if(err) throw err
+console.log(data)
+}
+
+3.path - helps with the path and 
+4. os - 
+5. events
+
+Middleware - middleware are like a middle middleman in the expree
+		- can execute any logic
+		- send the request to the next middleware
+		- can end req , res cycle
+		- check for authentication or autherisation
+		- can update the req or respose object.
+
+types of middleware - 1.Built in middlware - express.static
+			2. third party middleware - installed from third party eg body-parser, cors
+			3. custom middleware - we can create our custom middleware	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 DNS - Domain name System.
 - when we type any website into browser , DNS helps to find the IP address of the website so can our computer connect to it.
